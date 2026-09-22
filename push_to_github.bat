@@ -3,6 +3,8 @@ chcp 65001 >nul
 title 推送代码到 GitHub
 cd /d "%~dp0"
 
+set "PATH=C:\Users\huawei\scoop\apps\git\current\mingw64\bin;C:\Users\huawei\scoop\shims;%PATH%"
+
 echo ========================================================
 echo   正在推送代码到 GitHub 仓库: chuhang060409-del/abc
 echo ========================================================
@@ -23,7 +25,9 @@ if %ERRORLEVEL% EQU 0 (
     echo ========================================================
 ) else (
     echo.
-    echo [提示] 推送未完成，请确认网络连接与 GitHub 授权。
+    echo ========================================================
+    echo   [提示] 推送未成功。
+    echo ========================================================
 )
 
 echo.
