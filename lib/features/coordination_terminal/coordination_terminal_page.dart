@@ -23,7 +23,7 @@ class _CoordinationTerminalPageState extends State<CoordinationTerminalPage> {
     {
       'name': '种植农户',
       'org': '抚松长白山种植合作社',
-      'icon': Icons.potted_plant_rounded,
+      'icon': Icons.eco_rounded,
       'status': '采收节点已认证',
       'pending': 2,
     },

@@ -91,7 +91,7 @@ class TraceabilityArchivePage extends StatelessWidget {
                               color: TcmColors.tertiary,
                               borderRadius:
                                   BorderRadius.circular(TcmSpacing.radiusFull),
-                            ],
+                            ),
                             child: Text('官方存证',
                                 style: TcmTypography.labelDataSmall(
                                     color: Colors.white)),
@@ -132,7 +132,7 @@ class TraceabilityArchivePage extends StatelessWidget {
                   desc: '抚松长白山天然黑腐殖土林下种植 · 经北纬41°天然冷泉浇灌 · 人工精心带土采挖',
                   operator: '种植基地技术总监：张德贵 · 认证编号 GAP-JL-041',
                   time: '2026-09-08 09:30:15',
-                  icon: Icons.potted_plant_rounded,
+                  icon: Icons.eco_rounded,
                   accentColor: TcmColors.tertiary,
                 ),
                 const SizedBox(height: 10.0),

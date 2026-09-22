@@ -21,7 +21,7 @@ class _ParameterPresetsPageState extends State<ParameterPresetsPage> {
     {
       'name': '人参 (长白山野山参)',
       'category': '根茎类 · 严控温湿度',
-      'icon': Icons.psychiatry_rounded,
+      'icon': Icons.healing_rounded,
       'temp': 3.8,
       'tempRange': '2.0 ~ 6.0℃',
       'humidity': 64.5,

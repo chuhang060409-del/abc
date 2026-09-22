@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:isolate';
 import 'dart:math' as math;
+import 'package:flutter/foundation.dart';
 import '../models/spectral_data_model.dart';
 
 /// Payload sent to the isolated compute thread

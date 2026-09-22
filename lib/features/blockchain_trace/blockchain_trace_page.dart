@@ -283,7 +283,7 @@ class BlockchainTracePage extends StatelessWidget {
         'sub': '抚松万良人参种植基地 · 09-08 09:30',
         'operator': '种植户：王长贵 (数字证书认证)',
         'hash': '0x3a9f...e420',
-        'icon': Icons.potted_plant_rounded,
+        'icon': Icons.eco_rounded,
         'color': TcmColors.tertiary,
       },
       {
