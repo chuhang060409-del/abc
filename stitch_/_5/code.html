@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>参数预设 - 慧识药藏 · 药材恒温仓储系统</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#545f73",
+                      "on-secondary": "#ffffff",
+                      "primary": "#004ac6",
+                      "inverse-surface": "#2e3132",
+                      "on-primary-container": "#eeefff",
+                      "tertiary-fixed": "#6ffbbe",
+                      "surface": "#f8f9fb",
+                      "surface-container-highest": "#e1e2e4",
+                      "surface-bright": "#f8f9fb",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "surface-container-high": "#e7e8ea",
+                      "tertiary-container": "#007d55",
+                      "outline-variant": "#c3c6d7",
+                      "on-surface": "#191c1e",
+                      "inverse-on-surface": "#f0f1f3",
+                      "surface-container-low": "#f3f4f6",
+                      "on-primary-fixed": "#00174b",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "surface-dim": "#d9dadc",
+                      "surface-tint": "#0053db",
+                      "tertiary": "#006242",
+                      "on-secondary-container": "#586377",
+                      "secondary-fixed-dim": "#bcc7de",
+                      "on-surface-variant": "#434655",
+                      "primary-container": "#2563eb",
+                      "on-tertiary-container": "#bdffdb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#111c2d",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#3c475a",
+                      "secondary-container": "#d5e0f8",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container": "#edeef0",
+                      "on-tertiary-fixed": "#002113",
+                      "secondary-fixed": "#d8e3fb",
+                      "surface-variant": "#e1e2e4",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#dbe1ff",
+                      "inverse-primary": "#b4c5ff",
+                      "error": "#ba1a1a",
+                      "on-background": "#191c1e",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-error-container": "#93000a",
+                      "background": "#f8f9fb",
+                      "outline": "#737686"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter-desktop": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "40px",
+                      "gutter-mobile": "16px",
+                      "touch-target-min": "56px",
+                      "base-unit": "8px"
+              },
+              "fontFamily": {
+                      "label-data": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-data": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "label-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "30px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-data": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md pb-[100px] md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface border-b-2 border-outline-variant flex justify-between items-center w-full px-margin-desktop h-touch-target-min docked full-width top-0 sticky z-40">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl font-variation-settings: 'FILL' 1;">inventory_2</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">慧识药藏 · 药材恒温仓储系统</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 transition-transform duration-150 active:scale-[0.95]">wifi</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow p-margin-mobile md:p-margin-desktop max-w-7xl mx-auto w-full">
+<div class="mb-8">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">预设参数模板</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">选择适合当前存储药材的温湿度配置</p>
+</div>
+<!-- Bento Grid for TCM Templates -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-mobile md:gap-gutter-desktop mb-12">
+<!-- Template 1: Ginseng (Active) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-4 border-primary-container shadow-sm flex flex-col justify-between min-h-[240px] cursor-pointer relative overflow-hidden transition-all hover:shadow-md">
+<div class="absolute top-0 right-0 bg-primary-container text-on-primary-container px-4 py-2 rounded-bl-lg font-label-data text-label-data">当前应用</div>
+<div class="flex items-start justify-between mb-4 mt-2">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary mb-1">人参</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">根茎类 - 需严控湿度</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center border-2 border-primary-container">
+<span class="material-symbols-outlined text-primary-container" style="font-size: 32px;">psychiatry</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">device_thermostat</span> 目标温度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">15.0°C</div>
+</div>
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">humidity_mid</span> 目标湿度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">45.0%</div>
+</div>
+</div>
+</div>
+<!-- Template 2: Panax (Inactive) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-2 border-outline-variant shadow-sm flex flex-col justify-between min-h-[240px] cursor-pointer hover:border-primary hover:bg-surface-container-low transition-all">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">三七</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">散瘀止血 - 忌高温</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 32px;">spa</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">device_thermostat</span> 目标温度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">18.0°C</div>
+</div>
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">humidity_mid</span> 目标湿度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">50.0%</div>
+</div>
+</div>
+</div>
+<!-- Template 3: Angelica (Inactive) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-2 border-outline-variant shadow-sm flex flex-col justify-between min-h-[240px] cursor-pointer hover:border-primary hover:bg-surface-container-low transition-all">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">当归</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">补血活血 - 易泛油</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 32px;">potted_plant</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">device_thermostat</span> 目标温度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">12.0°C</div>
+</div>
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">humidity_mid</span> 目标湿度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">40.0%</div>
+</div>
+</div>
+</div>
+<!-- Template 4: Goji (Inactive) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-2 border-outline-variant shadow-sm flex flex-col justify-between min-h-[240px] cursor-pointer hover:border-primary hover:bg-surface-container-low transition-all">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">枸杞</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">果实类 - 极易受潮结块</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 32px;">grass</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">device_thermostat</span> 目标温度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">10.0°C</div>
+</div>
+<div class="bg-surface p-4 rounded-lg">
+<div class="font-label-data text-label-data text-on-surface-variant mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">humidity_mid</span> 目标湿度
+                        </div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">35.0%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Apply Action Area -->
+<div class="flex flex-col items-center justify-center mt-8 pb-8">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-center max-w-md">
+                点击上方卡片选择预设模板，确认后系统将自动调节至对应温湿度。
+            </p>
+<button class="bg-primary text-on-primary font-headline-md text-headline-md font-bold px-12 py-4 rounded-full min-h-[touch-target-min] min-w-[240px] flex items-center justify-center gap-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined">check_circle</span>
+                应用所选预设
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-desktop py-4 bg-surface-container border-t-2 border-outline-variant docked full-width bottom-0 rounded-t-lg"><!-- 系统状态 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1 text-2xl">grid_view</span>
+<span class="font-label-data text-xs">系统状态</span>
+</div>
+<!-- 产地质检 (当前页属于参数/质检相关设置，高亮显示) -->
+<div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-5 py-2 min-h-[48px] ring-4 ring-primary-container transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1 text-2xl">science</span>
+<span class="font-label-data text-xs">产地质检</span>
+</div>
+<!-- 区块溯源 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1 text-2xl">hub</span>
+<span class="font-label-data text-xs">区块溯源</span>
+</div>
+<!-- 风险预警 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1 text-2xl">notifications</span>
+<span class="font-label-data text-xs">风险预警</span>
+</div>
+<!-- 协同终端 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1 text-2xl">groups</span>
+<span class="font-label-data text-xs">协同终端</span>
+</div></nav>
+<!-- Desktop Navigation (Hidden on Mobile, usually handled by a SideNav or integrated into TopAppBar in real apps, but sticking strictly to the requested shell constraints) -->
+<nav class="hidden md:flex flex-row justify-center items-center bg-surface-container py-4 border-t-2 border-outline-variant fixed bottom-0 w-full">
+<div class="flex gap-8"><!-- 系统状态 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-6 py-3 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-label-data text-label-data">系统状态</span>
+</div>
+<!-- 产地质检 -->
+<div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-8 py-3 min-h-[56px] ring-4 ring-primary-container transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1">science</span>
+<span class="font-label-data text-label-data">产地质检</span>
+</div>
+<!-- 区块溯源 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-6 py-3 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1">hub</span>
+<span class="font-label-data text-label-data">区块溯源</span>
+</div>
+<!-- 风险预警 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-6 py-3 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1">notifications</span>
+<span class="font-label-data text-label-data">风险预警</span>
+</div>
+<!-- 协同终端 -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-6 py-3 hover:bg-surface-container-highest transition-colors rounded-lg cursor-pointer">
+<span class="material-symbols-outlined mb-1">groups</span>
+<span class="font-label-data text-label-data">协同终端</span>
+</div></div>
+</nav>
+
+
+</body></html>

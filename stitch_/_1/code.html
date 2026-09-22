@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="zh"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>慧识药藏 · 药材恒温仓储系统 - 设置</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#586377",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#bcc7de",
+                      "surface-container-low": "#f3f4f6",
+                      "on-surface-variant": "#434655",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#002113",
+                      "outline-variant": "#c3c6d7",
+                      "secondary-fixed": "#d8e3fb",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#004ac6",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "surface": "#f8f9fb",
+                      "tertiary": "#006242",
+                      "on-tertiary-container": "#bdffdb",
+                      "surface-variant": "#e1e2e4",
+                      "on-surface": "#191c1e",
+                      "surface-container-high": "#e7e8ea",
+                      "on-secondary-fixed-variant": "#3c475a",
+                      "surface-container": "#edeef0",
+                      "on-background": "#191c1e",
+                      "surface-container-highest": "#e1e2e4",
+                      "inverse-primary": "#b4c5ff",
+                      "secondary": "#545f73",
+                      "primary-fixed": "#dbe1ff",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-primary-container": "#eeefff",
+                      "inverse-on-surface": "#f0f1f3",
+                      "inverse-surface": "#2e3132",
+                      "background": "#f8f9fb",
+                      "secondary-container": "#d5e0f8",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-secondary-fixed": "#111c2d",
+                      "tertiary-fixed": "#6ffbbe",
+                      "primary-container": "#2563eb",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#0053db",
+                      "surface-bright": "#f8f9fb",
+                      "tertiary-container": "#007d55",
+                      "outline": "#737686",
+                      "on-primary-fixed": "#00174b",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d9dadc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter-mobile": "16px",
+                      "touch-target-min": "56px",
+                      "base-unit": "8px",
+                      "margin-desktop": "40px",
+                      "gutter-desktop": "24px"
+              },
+              "fontFamily": {
+                      "display-data": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-data": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-data": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "30px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-[64px] pb-[80px] md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-margin-mobile h-[64px] z-50 bg-surface dark:bg-surface-dim border-b-2 border-outline-variant dark:border-outline">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">factory</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">谱鉴药链 · 药材恒温仓储系统</h1>
+</div>
+<button class="hover:bg-surface-variant dark:hover:bg-surface-container-highest transition-colors active:scale-95 duration-100 ease-in-out px-4 py-2 rounded-full font-label-data text-label-data text-on-surface-variant flex items-center gap-2">
+<span class="">舱门关闭</span>
+<span class="material-symbols-outlined">sensor_door</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-margin-mobile md:p-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter-mobile md:gap-gutter-desktop max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="col-span-1 md:col-span-12 mb-6">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">系统设置</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">管理设备参数、维护计划和网络连接。</p>
+</div>
+<!-- Left Column: Settings List -->
+<div class="col-span-1 md:col-span-8 flex flex-col gap-6">
+<!-- Network & Display -->
+<div class="bg-surface-container-lowest rounded-lg p-6 border border-surface-variant">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 border-b border-surface-variant pb-2">网络与显示</h3>
+<div class="flex flex-col gap-4">
+<!-- WiFi Setting -->
+<div class="flex justify-between items-center py-4 border-b border-surface-container">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">wifi</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">WiFi连接</p>
+<p class="font-body-md text-body-md text-on-surface-variant">已连接: TCM-Main-5G</p>
+</div>
+</div>
+<button class="h-touch-target-min px-6 rounded-full border-2 border-outline text-on-surface font-label-data text-label-data hover:bg-surface-container-low transition-colors">配置</button>
+</div>
+<!-- Display Setting -->
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">brightness_6</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">屏幕熄屏时长</p>
+<p class="font-body-md text-body-md text-on-surface-variant">当前: 5分钟</p>
+</div>
+</div>
+<select class="h-touch-target-min px-6 rounded-lg border-2 border-outline text-on-surface font-label-data text-label-data bg-surface-container-lowest focus:border-primary focus:ring-0">
+<option>1 分钟</option>
+<option>5 分钟</option>
+<option>15 分钟</option>
+<option>从不</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Diagnostics & Security -->
+<div class="bg-surface-container-lowest rounded-lg p-6 border border-surface-variant">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 border-b border-surface-variant pb-2">诊断与安全</h3>
+<div class="flex flex-col gap-4">
+<!-- Self-Test -->
+<div class="flex justify-between items-center py-4 border-b border-surface-container">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">系统自检</p>
+<p class="font-body-md text-body-md text-on-surface-variant">检查冷却、传感器、通讯、气路</p>
+</div>
+</div>
+<button class="h-touch-target-min px-6 rounded-full bg-primary text-on-primary font-label-data text-label-data hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">开始自检</button>
+</div>
+<!-- Admin Password -->
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">管理员权限</p>
+<p class="font-body-md text-body-md text-on-surface-variant">管理主密码</p>
+</div>
+</div>
+<button class="h-touch-target-min px-6 rounded-full border-2 border-outline text-on-surface font-label-data text-label-data hover:bg-surface-container-low transition-colors">更新</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Consumables Bento Grid -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">耗材管理</h3>
+<!-- Desiccant Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-surface-variant relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-data text-label-data">优良</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary text-[32px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h4 class="font-body-lg text-body-lg text-on-surface">干燥剂寿命</h4>
+</div>
+<div class="mt-4">
+<p class="font-display-data text-display-data text-on-surface">78<span class="text-headline-md text-on-surface-variant">%</span></p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">预计 45 天后更换</p>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-4">
+<div class="bg-tertiary h-2 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Atomizer Core Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-surface-variant relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-error-container text-on-error-container px-3 py-1 rounded-full font-label-data text-label-data">警告</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error text-[32px]" style="font-variation-settings: 'FILL' 1;">air</span>
+<h4 class="font-body-lg text-body-lg text-on-surface">雾化芯状态</h4>
+</div>
+<div class="mt-4">
+<p class="font-display-data text-display-data text-on-surface">12<span class="text-headline-md text-on-surface-variant">%</span></p>
+<p class="font-body-md text-body-md text-error mt-2 font-bold">请在7天内更换</p>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-4">
+<div class="bg-error h-2 rounded-full" style="width: 12%"></div>
+</div>
+</div>
+<button class="w-full h-touch-target-min rounded-full border-2 border-primary text-primary font-label-data text-label-data hover:bg-primary-container hover:text-on-primary-container transition-colors mt-2">订购耗材</button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-2 h-[80px] bg-surface-container dark:bg-surface-container-lowest border-t-2 border-outline-variant dark:border-outline"><a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-2 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 rounded-xl" href="#"><span class="material-symbols-outlined mb-1">grid_view</span><span class="font-label-data text-label-data">系统状态</span></a><a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-2 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 rounded-xl" href="#"><span class="material-symbols-outlined mb-1">science</span><span class="font-label-data text-label-data">产地质检</span></a><a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-2 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 rounded-xl" href="#"><span class="material-symbols-outlined mb-1">hub</span><span class="font-label-data text-label-data">区块溯源</span></a><a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-2 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 rounded-xl" href="#"><span class="material-symbols-outlined mb-1">notifications</span><span class="font-label-data text-label-data">风险预警</span></a><a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-2 py-2 active:scale-90 transition-transform duration-200" href="#"><span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">groups</span><span class="font-label-data text-label-data">协同终端</span></a></nav>
+<!-- SideNav (Desktop Only Placeholder for typical layout, though TopAppBar is primary here. Hiding for strict adherence to TopAppBar JSON provided) -->
+
+
+
+
+</body></html>

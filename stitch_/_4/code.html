@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>追溯档案 - 仓储中控</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#586377",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "surface-container-low": "#f3f4f6",
+                        "on-surface-variant": "#434655",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#002113",
+                        "outline-variant": "#c3c6d7",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#004ac6",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "tertiary": "#006242",
+                        "on-tertiary-container": "#bdffdb",
+                        "surface-variant": "#e1e2e4",
+                        "on-surface": "#191c1e",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "surface-container": "#edeef0",
+                        "on-background": "#191c1e",
+                        "surface-container-highest": "#e1e2e4",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary": "#545f73",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-container": "#eeefff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fb",
+                        "secondary-container": "#d5e0f8",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-secondary-fixed": "#111c2d",
+                        "tertiary-fixed": "#6ffbbe",
+                        "primary-container": "#2563eb",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#f8f9fb",
+                        "tertiary-container": "#007d55",
+                        "outline": "#737686",
+                        "on-primary-fixed": "#00174b",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter-mobile": "16px",
+                        "touch-target-min": "56px",
+                        "base-unit": "8px",
+                        "margin-desktop": "40px",
+                        "gutter-desktop": "24px"
+                    },
+                    "fontFamily": {
+                        "display-data": ["Hanken Grotesk"],
+                        "label-data": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-data": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-data": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "30px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased pt-[64px] pb-[80px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-margin-mobile h-[64px] z-50 bg-surface dark:bg-surface-dim border-b-2 border-outline-variant dark:border-outline">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 0;">factory</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">仓储中控</h1>
+</div>
+<div class="flex items-center">
+<span class="font-label-data text-label-data text-on-surface-variant dark:text-on-surface-variant">已关门</span>
+</div>
+</header>
+<main class="p-margin-mobile md:p-margin-desktop max-w-7xl mx-auto space-y-6">
+<!-- Top: Dynamic Data Bento Grid -->
+<section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg border-2 border-surface-variant flex flex-col justify-between h-32">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase">设备编号</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">TCM-A892</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg border-2 border-surface-variant flex flex-col justify-between h-32">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase">时间戳</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">14:02:33</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg border-2 border-surface-variant flex flex-col justify-between h-32">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase">总重量</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">1,450</span>
+<span class="font-label-data text-label-data text-on-surface-variant">KG</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg border-2 border-primary bg-primary/5 flex flex-col justify-between h-32 relative overflow-hidden">
+<span class="font-label-data text-label-data text-primary uppercase z-10">等级评级</span>
+<span class="font-headline-lg text-headline-lg text-primary z-10">AA级</span>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[80px] text-primary/10 select-none z-0">workspace_premium</span>
+</div>
+</section>
+<!-- Middle: QR Code Section -->
+<section class="bg-surface-container-lowest rounded-xl border-2 border-surface-variant p-12 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest" style="background-image: radial-gradient(#c3c6d7 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+<div class="z-10 bg-white p-4 rounded-lg shadow-sm border border-outline-variant mb-8">
+<img class="w-64 h-64 object-cover" data-alt="A high-contrast, crisp industrial QR code designed for a medical or agricultural tracking interface, displayed on a clean white digital background. The QR pattern is complex and sharp, conveying dense data storage. The aesthetic is clinical, highly legible, and modern, suitable for a tablet kiosk in a warehouse setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKGbcKSFyUvGWdfALSO9fqUJ1H-QCnAJzh7_JvlvpBcuK_UZwNf2TpR3d1acXMu10T1NIOSIPirKp6ZytmNLnlWhJqCbwAdGSHdEXS4GrDXkPptx436XveCeimkGuHL3-wCZwSwm_3-urDr1OdDhdHCfm8AkH6QZ-Zowky1fgmeh5haeckZVSg_ewnu5D1MHNIDQy6ExF_FT70OnmMtnDIeeFsPItsK38p9PMbX5l4MEqnwHq6DwHmPg8b6aSwKP6Jddsg5R1GD5h8">
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface z-10 text-center tracking-wide">
+                手机扫码查看全链路分拣+仓储档案
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 z-10 text-center max-w-md">
+                手机扫码查看全链路分拣+仓储档案
+            </p>
+</section>
+<!-- Bottom: Table Preview (Bento Cards) -->
+<section class="bg-surface-container p-6 rounded-xl border-2 border-outline-variant">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-surface-variant">dataset</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">仓储阶段预览</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Data Point 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase mb-1">缺陷率</span>
+<span class="font-body-lg text-body-lg text-on-surface">0.4% 含水量</span>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary-container p-2 rounded-full">search_insights</span>
+</div>
+<!-- Data Point 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase mb-1">入库初始环境</span>
+<span class="font-body-lg text-body-lg text-on-surface">18°C / 45% RH</span>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary-container p-2 rounded-full">device_thermostat</span>
+</div>
+<!-- Data Point 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-data text-label-data text-on-surface-variant uppercase mb-1">存储时长</span>
+<span class="font-body-lg text-body-lg text-on-surface">14 天数</span>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary-container p-2 rounded-full">timer</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-2 bg-surface-container dark:bg-surface-container-lowest border-t-2 border-outline-variant dark:border-outline h-[80px]"><button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-4 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 h-full w-full max-w-[80px]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+<span class="font-label-data text-label-data">系统状态</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-4 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 h-full w-full max-w-[80px]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">science</span>
+<span class="font-label-data text-label-data">产地质检</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 h-[64px] w-full max-w-[80px] mt-2">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="font-label-data text-label-data">区块溯源</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-4 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 h-full w-full max-w-[80px]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">warning_amber</span>
+<span class="font-label-data text-label-data">风险预警</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim px-4 py-2 hover:bg-secondary-container/50 dark:hover:bg-secondary-fixed-dim/20 active:scale-90 transition-transform duration-200 h-full w-full max-w-[80px]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">groups</span>
+<span class="font-label-data text-label-data">协同终端</span>
+</button></nav>
+
+
+</body></html>
