@@ -1,4 +1,4 @@
-name: Build Android APK and iOS Package
+name: Build Android APK
 
 on:
   push:
@@ -39,37 +39,3 @@ jobs:
         with:
           name: TCM-Precision-Storage-Android-APK
           path: build/app/outputs/flutter-apk/app-release.apk
-
-  build-ios:
-    name: Build iOS Package
-    runs-on: macos-14
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.24.x'
-          channel: 'stable'
-          cache: true
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build iOS (No codesign for direct export)
-        run: flutter build ios --release --no-codesign
-
-      - name: Package Payload to IPA
-        run: |
-          mkdir -p build/ios/iphoneos/Payload
-          cp -r build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/
-          cd build/ios/iphoneos
-          zip -r tcm_precision_mobile.ipa Payload
-          cd ../../..
-
-      - name: Upload iOS IPA
-        uses: actions/upload-artifact@v4
-        with:
-          name: TCM-Precision-Storage-iOS-IPA
-          path: build/ios/iphoneos/tcm_precision_mobile.ipa
